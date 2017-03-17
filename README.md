@@ -1,7 +1,7 @@
 # RxActivityResult
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html) [![Release](https://img.shields.io/github/release/nekocode/RxActivityResult.svg?label=Jitpack)](https://jitpack.io/#nekocode/RxActivityResult)
 
-This is a library that can help you to receive results from `startActivityForResult()` as an Observable.
+This is a library that can help you to receive results from `startActivityForResult()` as an Observable. You can use it in Activity or Fragment. It actullay call the `startActivityFroResult()` in a Headless-Fragment that attaching to your Activity(/Fragment). And publish the activity results in the Headless-Fragment's `onActivityResult()`.
 
 **Supports only RxJava 2 now.**
 
