@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private void startSubActivityForResult() {
         final Intent intent = new Intent(this, SubActivity.class);
 
-        RxActivityResultCompact.startActivityFroResult(this, intent, REQUEST_CODE)
+        RxActivityResultCompact.startActivityForResult(this, intent, REQUEST_CODE)
                 .subscribe(new Consumer<ActivityResult>() {
                     @Override
                     public void accept(@NonNull ActivityResult result) throws Exception {

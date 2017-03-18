@@ -39,33 +39,33 @@ import io.reactivex.functions.Predicate;
 public class RxActivityResultCompact {
     private static final String FRAGMENT_TAG = "_RESULT_HANDLE_FRAGMENT_";
 
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull AppCompatActivity activity, @NonNull Intent intent, int requestCode) {
 
-        return startActivityFroResult(activity.getSupportFragmentManager(), intent, requestCode, null);
+        return startActivityForResult(activity.getSupportFragmentManager(), intent, requestCode, null);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull AppCompatActivity activity, @NonNull Intent intent, int requestCode, @Nullable Bundle options) {
 
-        return startActivityFroResult(activity.getSupportFragmentManager(), intent, requestCode, options);
+        return startActivityForResult(activity.getSupportFragmentManager(), intent, requestCode, options);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull Fragment fragment, @NonNull Intent intent, int requestCode) {
 
-        return startActivityFroResult(fragment.getFragmentManager(), intent, requestCode, null);
+        return startActivityForResult(fragment.getFragmentManager(), intent, requestCode, null);
     }
 
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull Fragment fragment, @NonNull Intent intent, int requestCode, @NonNull Bundle options) {
 
-        return startActivityFroResult(fragment.getFragmentManager(), intent, requestCode, options);
+        return startActivityForResult(fragment.getFragmentManager(), intent, requestCode, options);
     }
 
-    private static Observable<ActivityResult> startActivityFroResult(
+    private static Observable<ActivityResult> startActivityForResult(
             @NonNull FragmentManager fragmentManager, @NonNull final Intent intent, final int requestCode, @Nullable final Bundle options) {
 
         ResultHandleV4Fragment _fragment = (ResultHandleV4Fragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);

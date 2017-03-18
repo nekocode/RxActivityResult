@@ -10,7 +10,7 @@ This is a library that can help you to receive results from `startActivityForRes
 Example:
 
 ```
-RxActivityResult.startActivityFroResult(this, intent, REQUEST_CODE)
+RxActivityResult.startActivityForResult(this, intent, REQUEST_CODE)
         .subscribe(new Consumer<ActivityResult>() {
             @Override
             public void accept(@NonNull ActivityResult result) throws Exception {

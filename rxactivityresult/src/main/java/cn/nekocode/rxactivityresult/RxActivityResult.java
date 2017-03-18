@@ -39,35 +39,35 @@ public class RxActivityResult {
     private static final String FRAGMENT_TAG = "_RESULT_HANDLE_FRAGMENT_";
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull Activity activity, @NonNull Intent intent, int requestCode) {
 
-        return startActivityFroResult(activity.getFragmentManager(), intent, requestCode, null);
+        return startActivityForResult(activity.getFragmentManager(), intent, requestCode, null);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull Activity activity, @NonNull Intent intent, int requestCode, @Nullable Bundle options) {
 
-        return startActivityFroResult(activity.getFragmentManager(), intent, requestCode, options);
+        return startActivityForResult(activity.getFragmentManager(), intent, requestCode, options);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull Fragment fragment, @NonNull Intent intent, int requestCode) {
 
-        return startActivityFroResult(fragment.getFragmentManager(), intent, requestCode, null);
+        return startActivityForResult(fragment.getFragmentManager(), intent, requestCode, null);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    public static Observable<ActivityResult> startActivityFroResult(
+    public static Observable<ActivityResult> startActivityForResult(
             @NonNull Fragment fragment, @NonNull Intent intent, int requestCode, @NonNull Bundle options) {
 
-        return startActivityFroResult(fragment.getFragmentManager(), intent, requestCode, options);
+        return startActivityForResult(fragment.getFragmentManager(), intent, requestCode, options);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    private static Observable<ActivityResult> startActivityFroResult(
+    private static Observable<ActivityResult> startActivityForResult(
             @NonNull FragmentManager fragmentManager, @NonNull final Intent intent, final int requestCode, @Nullable final Bundle options) {
 
         ResultHandleFragment _fragment = (ResultHandleFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);
